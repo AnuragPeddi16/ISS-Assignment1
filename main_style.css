@@ -1,0 +1,518 @@
+html {
+
+    scroll-behavior: smooth;
+    font-family: 'Calibri';
+
+}
+
+body {
+
+    font-size: 25px;
+    margin: 0;
+    background-color: rgb(249, 249, 238);
+    transition: background-color 0.3s ease;
+
+}
+
+body.dark {
+
+    background-color: rgb(69, 69, 69);
+    color: rgb(211, 211, 211);
+    transition: background-color 0.3s ease;
+
+}
+
+div {
+
+    padding: 20px;
+
+}
+
+div.content {
+
+    margin: 5%;
+
+}
+
+div.back {
+
+    margin: 0;
+    padding-top: 0;
+    width: auto;
+    background-color: rgb(249, 249, 238);
+    box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.2), 0 -6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: box-shadow 0.3s ease;
+    transition: background-color 0.3s ease;
+
+}
+
+div.back.dark {
+
+    background-color: rgb(69, 69, 69);
+    box-shadow: 0 -4px 8px 0 rgba(175, 175, 175, 0.2), 0 -6px 20px 0 rgba(175, 175, 175, 0.19);
+    transition: box-shadow 0.3s ease;
+    transition: background-color 0.3s ease;
+
+}
+
+.container {
+
+    display: flex;
+
+}
+
+div.intro {
+
+    display: flex;
+    background-color: rgb(96, 225, 210);
+    transition: background-color 0.3s ease;
+    height:100vh;
+    width:100vw;
+    margin: 0;
+    font-size: 45px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: -100;
+
+}
+
+div.intro.dark {
+
+    background-color: rgb(48, 48, 48);
+    transition: background-color 0.3s ease;
+
+}
+
+a.dark {
+
+    color: lightblue;
+    transition: color 0.3s ease;
+
+}
+
+img.pfp {
+
+    border-radius: 50%;
+    margin-left: -20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: box-shadow 0.3s ease;
+
+}
+
+img.dark {
+
+    box-shadow: 0 4px 8px 0 rgba(175, 175, 175, 0.2), 0 6px 20px 0 rgba(175, 175, 175, 0.19);
+    transition: box-shadow 0.3s ease;
+
+}
+
+ul.navbar {
+
+    list-style-type: none;
+    position: fixed;
+    width: 100%;
+    background-color: rgb(89, 158, 255);
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 1;
+    transition: background-color 0.3s ease;
+    transition: box-shadow 0.3s ease;
+
+}
+
+ul.dark {
+
+    background-color: rgb(33, 33, 33);
+    box-shadow: 0 4px 8px 0 rgba(175, 175, 175, 0.2), 0 6px 20px 0 rgba(175, 175, 175, 0.19);
+    transition: background-color 0.3s ease;
+    transition: box-shadow 0.3s ease;
+
+}
+
+li.navbar {
+
+    display: inline;
+    margin: 0;
+
+}
+
+li a {
+
+    display: inline-block;
+    padding: 10px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    transition: color 0.3s ease;
+
+}
+
+li a.dark {
+
+    color: rgb(211, 211, 211);
+    transition: color 0.3s ease;
+
+}
+
+li a:hover:not(.active) {
+
+    background-color: rgb(4, 115, 190);
+
+}
+
+li a.dark:hover:not(.active) {
+
+    background-color: rgb(0, 0, 0);
+
+}
+
+li a:hover:active {
+
+    background-color: rgb(3, 55, 80);
+    color: rgb(184, 185, 186);
+
+}
+
+li a.dark:hover:active {
+
+    background-color: rgb(126, 126, 126);
+    color: rgb(52, 52, 52);
+
+}
+
+button.chmode {
+
+    display: flex;
+    position: fixed;
+    top:92%;
+    left:95%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    font-size: 10px;
+    border:3px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 25%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+button.chmode.dark {
+
+    background-color: rgb(0, 0, 0);
+    border:3px solid rgb(255, 255, 255);
+    box-shadow: 0 4px 8px 0 rgba(175, 175, 175, 0.2), 0 6px 20px 0 rgba(175, 175, 175, 0.19);
+
+}
+
+button.chmode:hover:not(.active) {
+
+    opacity: 100%;
+    background-color: rgb(105, 105, 105);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+button.chmode.dark:hover:not(.active) {
+
+    background-color: rgb(122, 122, 122);
+    box-shadow: 0 8px 16px 0 rgba(175, 175, 175, 0.2), 0 12px 40px 0 rgba(175, 175, 175, 0.19);
+
+}
+
+button.chmode:hover:active {
+
+    opacity: 100%;
+    background-color: rgb(0, 0, 0);
+
+}
+
+button.chmode.dark:hover:active {
+
+    background-color: rgb(255, 255, 255);
+
+}
+
+div.blogpost {
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+div.blog {
+
+    margin: 20px;
+    padding: 0;
+    width: 25%;
+    height: 450px;
+    background-color: white;
+    justify-content:start;
+    align-items:start;
+    display: flex;
+    float: left;   
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    transition: background-color 0.3s ease;
+    transition: box-shadow 0.3s ease;
+
+}            
+
+div.blog:hover {
+
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+div.blog.dark {
+
+    background-color: black;
+    box-shadow: 0 4px 8px 0 rgba(175, 175, 175, 0.2), 0 6px 20px 0 rgba(175, 175, 175, 0.19);
+    transition: background-color 0.3s ease;
+    transition: box-shadow 0.3s ease;
+
+}
+
+div.blog.dark:hover {
+
+    box-shadow: 0 8px 16px 0 rgba(175, 175, 175, 0.2), 0 12px 40px 0 rgba(175, 175, 175, 0.19);
+
+}
+
+a.blogpost {
+
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    text-align:center;
+    padding: 10px;
+    transition: color 0.3s ease;
+
+}
+
+a.blogpost.dark {
+
+    color: rgb(211, 211, 211);
+    transition: color 0.3s ease;
+
+}
+
+img.blogpost {
+
+    position: absolute;
+    align-self:flex-end;
+    border-radius: 15px;
+    pointer-events: none;
+
+}
+
+h2, h1 {
+
+    color: rgb(89, 158, 255);
+    text-align: center;
+    text-shadow: -0.5px 0.5px 1px #2a2a2a, 
+              0.5px 0.5px 1px #2a2a2a, 
+             0.5px -0.5px 1px #2a2a2a, 
+            -0.5px -0.5px 1px #2a2a2a;
+    transition: color 0.3s ease;
+
+}
+
+h2 {
+
+    margin-bottom: 40px;
+
+}
+
+h2.dark, h1.dark {
+
+    color: rgb(249, 249, 238);
+    transition: color 0.3s ease;
+
+}
+
+h4 {
+
+    margin: 0;
+
+}
+
+a.discrete {
+
+    text-decoration: none;
+    color: inherit;
+
+}
+
+textarea.comment {
+
+    resize: none;
+    border-radius: 15px;
+    padding: 15px;
+    margin-left: 15px;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: background-color 0.3s ease;
+    transition: box-shadow 0.3s ease;
+
+}
+
+textarea.dark {
+
+    box-shadow: 0 4px 8px 0 rgba(175, 175, 175, 0.2), 0 6px 20px 0 rgba(175, 175, 175, 0.19);
+    background-color: rgb(108, 108, 108);
+    border: 1px solid white;
+    color: rgb(249, 249, 238);
+    transition: background-color 0.3s ease;
+    transition: color 0.3s ease;
+    transition: box-shadow 0.3s ease;
+
+}
+
+textarea.dark::placeholder {
+
+    color: rgb(249, 249, 238);
+    transition: color 0.3s ease;
+
+}
+
+.comment_container {
+
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+div.break {
+
+    flex-basis: 100%;
+    height: 0;
+    padding: 5px;
+
+}
+
+button.post {
+
+    background-color: rgb(89, 158, 255);
+    font-size:15px;
+    padding:10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 15px;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: background-color 0.3s ease;
+    transition: box-shadow 0.3s ease;
+
+}
+
+button.post.dark {
+
+    background-color: rgb(33, 33, 33);
+    color: rgb(211, 211, 211);
+    border: 0;
+    box-shadow: 0 4px 8px 0 rgba(175, 175, 175, 0.2), 0 6px 20px 0 rgba(175, 175, 175, 0.19);
+    transition: background-color 0.3s ease;
+    transition: color 0.3s ease;
+    transition: box-shadow 0.3s ease;
+
+}
+
+button.post:hover:not(.active) {
+
+    background-color: rgb(4, 115, 190);
+
+}
+
+button.post.dark:hover:not(.active) {
+
+    background-color: rgb(0, 0, 0);
+
+}
+
+button.post:hover:active {
+
+    background-color: rgb(3, 55, 80);
+    color: rgb(184, 185, 186);
+
+}
+
+button.post.dark:hover:active {
+
+    background-color: rgb(126, 126, 126);
+    color: rgb(52, 52, 52);
+
+}
+
+button.like_button {
+
+    background-color: transparent;
+    border: 0;
+    height: 35px;
+    float: right;
+    align-items: center;
+    
+}
+
+.flex_space {
+
+    justify-content: space-between;
+
+}
+
+p.name {
+
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-left: 20px;
+    height: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+
+}
+
+p.comment {
+
+    font-size: 17px;
+    margin: 0;
+    margin-left: 50px;
+    height: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+
+}
+
+hr.divider {
+
+    border: 0;
+    height: 2px;
+    width: 80%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+
+}
+
+hr.dark {
+
+    background-image: linear-gradient(to right, rgba(211, 211, 211, 0), rgba(211, 211, 211, 1), rgba(211, 211, 211, 0));
+    /* box-shadow: 0 4px 8px 0 rgba(175, 175, 175, 0.2), 0 6px 20px 0 rgba(175, 175, 175, 0.19); */
+
+}
